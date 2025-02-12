@@ -14,6 +14,7 @@ list_of_files = [
     f"src/{project_name}/pipeline/__init__.py",
     f"src/{project_name}/entity/__init__.py",
     f"src/{project_name}/constants/__init__.py",
+    "logs/app.log",
     "tests/__init__.py",
     "conifg/config.yaml",
     "dvc.yaml",
@@ -44,3 +45,23 @@ for filepath in list_of_files:
     
     else:
         logger.info(f"{filename} is already exists")
+
+# setup logs
+# Define log file path
+log_file = os.path.join('logs', "app.log")
+
+# Remove any previously configured handlers to prevent duplicate logs
+logger.remove()
+
+# Add new log configuration
+logger.add(
+    log_file,
+    format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {module}:{line} - {message}",
+    level="DEBUG",
+    rotation="5 MB",
+    compression="zip",  # Compress old logs to save space
+    enqueue=True  # Safe for multi-threading
+)
+
+# Now logging will work correctly
+logger.info("Logging is set up! Logs will be stored in 'log/app.log'")

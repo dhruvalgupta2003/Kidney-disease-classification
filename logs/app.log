@@ -1,0 +1,8 @@
+2025-02-12 21:45:17 | INFO | template:67 - Logging is set up! Logs will be stored in 'log/app.log'
+2025-02-12 21:46:24 | INFO | template:67 - Logging is set up! Logs will be stored in 'log/app.log'
+2025-02-12 21:48:53 | INFO | template:67 - Logging is set up! Logs will be stored in 'log/app.log'
+2025-02-12 21:48:53 | DEBUG | template:69 - This is a debug message
+2025-02-12 21:48:53 | INFO | template:70 - This is an info message
+2025-02-12 21:48:53 | WARNING | template:71 - This is a warning message
+2025-02-12 21:48:53 | ERROR | template:72 - This is an error message
+2025-02-12 21:48:53 | CRITICAL | template:73 - This is a critical message

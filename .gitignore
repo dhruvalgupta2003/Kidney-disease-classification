@@ -1,0 +1,8 @@
+.pytype/
+
+cython_debug/
+
+.venv
+.env
+__py*
+artifacts/*
